@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@coinbase/wallet-sdk": "^3.2.0",
     "@nomiclabs/hardhat-ethers": "^2.0.5",
     "@nomiclabs/hardhat-waffle": "^2.0.2",
     "@openzeppelin/contracts": "^4.5.0",
+    "@walletconnect/web3-provider": "^1.7.8",
     "axios": "^0.26.0",
     "chai": "^4.3.6",
     "ethereum-waffle": "^3.4.0",
@@ -24,10 +26,25 @@
     "web3modal": "^1.9.5"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.6",
+    "autoprefixer": "^10.4.7",
     "eslint": "7.29.0",
     "eslint-config-next": "11.0.1",
-    "postcss": "^8.3.5",
-    "tailwindcss": "^2.2.4"
-  }
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.0.24"
+  },
+  "description": "![Header](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pfofv47dooojerkmfgr4.png)",
+  "main": "config.example.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dabit3/polygon-ethereum-nextjs-marketplace.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dabit3/polygon-ethereum-nextjs-marketplace/issues"
+  },
+  "homepage": "https://github.com/dabit3/polygon-ethereum-nextjs-marketplace#readme"
 }
