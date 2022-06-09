@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-export default function Home() {
+export default function Texas() {
   const [nfts, setNFTs] = useState([]);
   const [loadingState, setLoadingState] = useState("not-loaded");
   const texas = {
@@ -48,27 +48,24 @@ export default function Home() {
   return (
     <div className="flex justify-center">
       <div className="px-4" style={{ maxWidth: "3000px" }}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
-          <div className="border shadow rounded-xl overflow-hidden">
-            <div className="p-4">
-              <p style={{ height: "64px" }} className="text-2xl font-semibold">
-                Please enter your State
-              </p>
-              <input
-                placeholder="We're here for you"
-                className="mt-8 border rounded p-4"
-                onChange={(e) =>
-                  updateFormInput({ ...formInput, name: e.target.value })
-                }
-              />
-            </div>
-            <div className="p-4 bg-black">
-              <button
-                className="mt-4 w-full bg-pink-500 text-white font-bold py-2 px-12 rounded"
-                onClick={() => console.log("sup")}
-              >
-                <Link href="/texas">Explore</Link>
-              </button>
+        <div className="border shadow rounded-xl overflow-hidden">
+          <img src="https://www.gannett-cdn.com/authoring/2019/10/02/NAAS/ghows-TX-93f48b1a-a218-41c7-e053-0100007f242e-9f3877a7.jpeg" />
+          <div className="p-4">
+            <p className="font-semibold">
+              Abortions in Texas are banned after six weeks—a time before many
+              people even know they are pregnant, also known as the Texas
+              Heartbeat Act, abortion clinics have had to turn away
+              people seeking an abortion after six weeks.
+            </p>
+          </div>
+          <div className="p-4 bg-black">
+            <div className="mt-4 w-full bg-pink-500 text-white font-bold py-2 px-12 rounded">
+              You can find any licensed clinic in your state or a nearby state
+              that provide safe abortion{" "}
+              <Link href="https://www.abortionfinder.org/](https://www.abortionfinder.org/">
+                here
+              </Link>
+              .
             </div>
           </div>
         </div>

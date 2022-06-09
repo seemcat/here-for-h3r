@@ -1,109 +1,26 @@
-## Full stack NFT marketplace built with Polygon, Solidity, IPFS, & Next.js
+## Resources
+- [Graph Hack Pitch Deck](https://www.canva.com/design/DAFCwU5IJ84/KZOrYiMbZ19vGxyehvtdnQ/view?utm_content=DAFCwU5IJ84&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+- [Shout out by Eva Beylin](https://twitter.com/evabeylin/status/1533527690078130176?s=20&t=OTPptIbK9guMh6bWViXpTQ)
 
-![Header](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pfofv47dooojerkmfgr4.png)
 
-This is the codebase to go along with tbe blog post [Building a Full Stack NFT Marketplace on Ethereum with Polygon](https://dev.to/dabit3/building-scalable-full-stack-apps-on-ethereum-with-polygon-2cfb)
+## Inspiration
+Abortion laws based on different state can be confusing and costly for women depends on which stage of pregnancy they are in and what state they live in. Many could be forced to travel far for abortion. We want to create a safe, secure Web3 solution to inform women of their options.
 
-### Running this project
+## What it does
+Here for H3r is a mobile-friendly web app that enables users to sign in with a Web3 wallet, select a given state in the US (i.e. California) and view censorship resistant information, advice and best practices on safe abortion.
 
-#### Gitpod
+## How we built it
+We built a censorship resistant on-chain database using NFTs stored on IPFS. The NFTs serve as data sources for providing safe abortion information relating to specific states within the US.
 
-To deploy this project to Gitpod, follow these steps:
+## Challenges we ran into
+Because displaying the most important information for women was important for the UX, we did the research. We found that only some states in particular need their own unique data source (such as Texas and Wyoming), while the majority are grouped into restriction based categories and tagged with their applicable states as a meta data property. The latter enabled us to sort and display any relevant information in our UI relating to the selected state.
 
-1. Click this link to deploy
+## Accomplishments that we're proud of
+Did you know that a lower percentage of women vs men have Web3 wallets? 31% women vs. 69% men (via fumbi.network). This is why we're proud to build an NFT-based dapp that is not only going to support women, but also educate, inspire and onboard them to web3.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#github.com/dabit3/polygon-ethereum-nextjs-marketplace)
+## What's next for Here for H3r
+It would also be possible to mint new NFTs / data sources and display more information about each state, as well as dynamically update existing metadata to ensure the information displayed is up to date.
 
-2. Import the RPC address given to you by GitPod into your MetaMask wallet
+In addition, we can also partner with stakeholders and NGOs who wants to support women by airdroping funds, or POAPs for users of Here for H3r. These funds can help women travel, and the POAPs can grant them access to educational services.
 
-This endpoint will look something like this:
-
-```
-https://8545-copper-swordtail-j1mvhxv3.ws-eu18.gitpod.io/
-```
-
-The chain ID should be 1337. If you have a localhost rpc set up, you may need to overwrite it.
-
-![MetaMask RPC Import](wallet.png)
-
-#### Local setup
-
-To run this project locally, follow these steps.
-
-1. Clone the project locally, change into the directory, and install the dependencies:
-
-```sh
-git clone https://github.com/dabit3/polygon-ethereum-nextjs-marketplace.git
-
-cd polygon-ethereum-nextjs-marketplace
-
-# install using NPM or Yarn
-npm install
-
-# or
-
-yarn
-```
-
-2. Start the local Hardhat node
-
-```sh
-npx hardhat node
-```
-
-3. With the network running, deploy the contracts to the local network in a separate terminal window
-
-```sh
-npx hardhat run scripts/deploy.js --network localhost
-```
-
-4. Start the app
-
-```
-npm run dev
-```
-
-### Configuration
-
-To deploy to Polygon test or main networks, update the configurations located in __hardhat.config.js__ to use a private key and, optionally, deploy to a private RPC like Infura.
-
-```javascript
-require("@nomiclabs/hardhat-waffle");
-const fs = require('fs');
-const privateKey = fs.readFileSync(".secret").toString().trim() || "01234567890123456789";
-
-// infuraId is optional if you are using Infura RPC
-const infuraId = fs.readFileSync(".infuraid").toString().trim() || "";
-
-module.exports = {
-  defaultNetwork: "hardhat",
-  networks: {
-    hardhat: {
-      chainId: 1337
-    },
-    mumbai: {
-      // Infura
-      // url: `https://polygon-mumbai.infura.io/v3/${infuraId}`
-      url: "https://rpc-mumbai.matic.today",
-      accounts: [privateKey]
-    },
-    matic: {
-      // Infura
-      // url: `https://polygon-mainnet.infura.io/v3/${infuraId}`,
-      url: "https://rpc-mainnet.maticvigil.com",
-      accounts: [privateKey]
-    }
-  },
-  solidity: {
-    version: "0.8.4",
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 200
-      }
-    }
-  }
-};
-```
-
-If using Infura, update __.infuraid__ with your [Infura](https://infura.io/) project ID.
+As you can already imagine, with Here for H3r, there are endless of opportunities to support women's health, career, education, fitness, spirituality, and more.
